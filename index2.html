@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .x{
+            border: 1px solid black;
+        }
+        .xx{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="x">
+        <div class="y">hello</div>
+        <div class="z">world</div>
+    </div>
+    <input class="a" type="text">
+    <button onclick="setAttr()">set atributes</button>
+    <button onclick="setClass()">set class</button>
+    <button onclick="setStyles()">set style</button>
+
+    <script>
+        function setAttr(){
+            var a = document.querySelector(".a");
+            if(!a.hasAttribute("value"))
+                a.setAttribute("value","vasia");
+            else
+                a.removeAttribute("value");
+            alert(a.getAttribute("value"));
+        }
+        function setClass() {
+            let x = document.querySelector(".x");
+            // if(!x.classList.contains("xx")){
+            //     x.classList.add("xx");
+            // }else{
+            //     x.classList.remove("xx");
+            // }
+            x.classList.toggle("xx");
+        }
+        function setStyles() {
+            let y = document.querySelector(".y");
+            let z = document.querySelector(".z");
+            y.style.backgroundColor="#777";
+            y.style.color="#fff";
+            z.style.cssFloat="left";
+            y.style.cssFloat="left";
+
+            alert(y.style.cssText);
+
+            let styles = getComputedStyle(y);
+            alert(styles.width);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+fvasd
+<div class="header">
+    <h1>hello</h1>
+    <ul class="nav">
+        <li><a href="#">hello</a></li>
+        <li><a href="#">hello</a></li>
+        <li><a href="#">hello</a></li>
+        <li><a href="#">hello</a></li>
+        <li><a href="#">hello</a></li>
+    </ul>
+</div>
+
+<button onclick='myf()'>ok</button>
+
+<script>
+    function myf(){
+        var listElems = document.querySelectorAll(".nav>li");
+        listElems.forEach((elem,i)=>{
+            if(i%2==0)elem.style.background="red";
+        })
+    }
+
+
+
+
+
+    // console.log(document.body.firstChild.nodeValue);
+    // if(document.body.firstChild.nodeType===Node.TEXT_NODE){
+    //     console.log("is text node");
+    // }else if(document.body.firstChild.nodeType===Node.ELEMENT_NODE){
+    //     console.log("is element");
+    // }
+    //
+    // console.log(document.body.firstChild.nodeName);
+    //
+    // document.body.firstChild.nodeValue="ivan";
+
+    //About elements
+    console.log(document.body.tagName);
+    console.log(document.body.innerHTML);
+    //document.body.innerHTML="<h1>!!!</h1>";
+    console.log(document.body.textContent);
+    console.log(document.body.innerText);
+    //document.body.innerText="<h1>!!!</h1>";
+
+
+    console.log(document.body.outerHTML);
+
+    //input.value="dszgdf";
+    //input.checked=true;
+    //input.disabled=true;
+    //input.required=true;
+
+</script>
+</body>
+</html>
